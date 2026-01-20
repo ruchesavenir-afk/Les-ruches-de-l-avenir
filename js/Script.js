@@ -186,8 +186,8 @@ if (socialContainer && data.reseaux) {
       </svg>
     `
   };
-
-  Object.entries(data.reseaux).forEach(([key, url]) => {
+  
+ Object.entries(data.reseaux).forEach(([key, url]) => {
     if (!url || !icons[key]) return;
 
     const a = document.createElement("a");
@@ -196,12 +196,21 @@ if (socialContainer && data.reseaux) {
     a.rel = "noopener noreferrer";
     a.innerHTML = icons[key];
     a.setAttribute("aria-label", key);
-    
+
     socialContainer.appendChild(a);
   });
-  const legalNotice = document.getElementById("legal-notice");
+}
+
+/* =====================
+   MENTIONS LEGALES
+===================== */
+const legalNotice = document.getElementById("legal-notice");
 if (legalNotice && data.legal) {
   legalNotice.textContent = data.legal;
 }
-})
-.catch(error => console.error("Erreur chargement JSON :", error));
+
+}); // ← FIN DU then(data => { ... })
+
+.catch(error => {
+  console.error("Erreur chargement JSON :", error);
+});
