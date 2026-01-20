@@ -1,39 +1,84 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<title>Les ruches de l'avenir – Apiculteur à Villevêque</title>
-<meta name="description" content="Apiculteur local à Villevêque et Cheffes. Miel non chauffé, sans transhumance et élevage d’essaims sélectionnés.">
-<meta name="robots" content="index, follow">
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <title>Les ruches de l'avenir – Apiculteur à Villevêque</title>
 
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  "name": "Les ruches de l'avenir",
-  "description": "Apiculture locale, miel non chauffé",
-  "areaServed": "Maine-et-Loire",
-  "telephone": "0652208998",
-  "email": "Ruches.avenir@gmail.com"
-}
-</script>
+  <meta name="description" content="Apiculteur local à Villevêque et Cheffes. Miel non chauffé, sans transhumance et élevage d’essaims sélectionnés.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="index, follow">
+
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- SEO local -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Les ruches de l'avenir",
+    "description": "Apiculture locale, miel non chauffé",
+    "areaServed": "Maine-et-Loire",
+    "telephone": "0652208998",
+    "email": "Ruches.avenir@gmail.com"
+  }
+  </script>
 </head>
 
 <body>
-<header>
-<h1 data-site-nom></h1>
-<nav>
-<a href="miel.html">Miel</a>
-<a href="elevage.html">Élevage</a>
-<a href="contact.html">Contact</a>
-</nav>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="hero-overlay">
+    <img src="images/logo.png" alt="Logo Les ruches de l'avenir" class="logo">
+    <h1 data-site-nom></h1>
+
+    <nav>
+      <a href="miel.html">Miel</a>
+      <a href="elevage.html">Élevage</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
 </header>
 
-<section>
-<h2 data-presentation-titre></h2>
-<p data-presentation-texte></p>
+<!-- PRÉSENTATION -->
+<section class="section reveal">
+  <h2 data-presentation-titre></h2>
+  <p data-presentation-texte></p>
 </section>
 
-<script src="script.js"></script>
+<!-- APERÇU MIELS -->
+<section class="section reveal">
+  <h2>Miels artisanaux</h2>
+  <div class="grid" data-miels></div>
+</section>
+
+<!-- APERÇU ÉLEVAGE -->
+<section class="section reveal">
+  <h2>Élevage d’essaims</h2>
+  <p data-elevage-texte></p>
+
+  <div class="elevage-grid" data-elevage-photos></div>
+
+  <p class="cta">
+    <a href="contact.html">Me contacter pour les tarifs</a>
+  </p>
+</section>
+
+<!-- CONTACT RAPIDE -->
+<section class="section reveal">
+  <h2>Contact</h2>
+  <p>Téléphone : <strong data-telephone></strong></p>
+  <p>Email : <strong data-email></strong></p>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>© <span data-site-nom></span> – Tous droits réservés</p>
+  <p><a href="contact.html">Mentions légales</a></p>
+</footer>
+
+<script src="js/Script.js"></script>
+<script src="js/animations.js"></script>
+
 </body>
 </html>
