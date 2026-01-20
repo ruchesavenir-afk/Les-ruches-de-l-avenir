@@ -155,6 +155,9 @@ if (socialContainer && data.reseaux) {
     a.rel = "noopener noreferrer";
     a.innerHTML = icons[key];
     a.setAttribute("aria-label", key);
+      })
+  .catch(error => console.error("Erreur chargement JSON :", error));
+
 
     socialContainer.appendChild(a);
   });
