@@ -35,6 +35,13 @@
 
   "elevage": {
     "texte": "Vente d’essaims hivernés et de l’année issus de colonies sélectionnées sur la production de miel, la douceur et la lenteur à essaimer. Critères secondaires : hygiénisme, gestion du varroa, consommation hivernale et réserves.",
-    "prix": "Prix dégressifs selon quantité, me contacter."
+    "prix": "Prix dégressifs selon quantité, me contacter.",
+    "photos": [
+      "images/elevage1.jpg",
+      "images/elevage2.jpg",
+      "images/elevage3.jpg",
+      "images/elevage4.jpg",
+      "images/elevage5.jpg",
+      "images/elevage6.jpg"
   }
 }
