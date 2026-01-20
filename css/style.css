@@ -1,16 +1,86 @@
-/* HERO */
+/* =====================
+   HERO ACCUEIL
+===================== */
+
 .hero {
-  animation: heroFade 1.2s ease-out forwards;
+  height: 80vh;
+  background-image: url("../images/Accueil.jpg");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-@keyframes heroFade {
-  from {
-    opacity: 0;
-    transform: scale(1.03);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1);
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+}
+
+.hero-overlay {
+  position: relative;
+  text-align: center;
+  color: #fff;
+  max-width: 800px;
+  padding: 20px;
+}
+
+.hero-overlay img {
+  width: 120px;
+  margin-bottom: 20px;
+}
+
+.hero-overlay h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.hero-tagline {
+  font-size: 1.2rem;
+  opacity: 0.9;
+}
+
+/* =====================
+   PRESENTATION
+===================== */
+
+.presentation {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  padding: 80px 10%;
+  align-items: center;
+  background: #fff;
+}
+
+.presentation-image img {
+  width: 100%;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+.presentation-text h2 {
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+}
+
+.presentation-text p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #444;
+}
+
+/* =====================
+   RESPONSIVE
+===================== */
+
+@media (max-width: 900px) {
+  .presentation {
+    grid-template-columns: 1fr;
+    text-align: center;
   }
 }
 
@@ -108,34 +178,6 @@
   width: 100%;
 }
 
-/* =====================
-   PRESENTATION
-===================== */
-
-.presentation {
-  display: flex;
-  gap: 40px;
-  padding: 80px 30px;
-  max-width: 1200px;
-  margin: auto;
-  align-items: center;
-}
-
-.presentation-image img {
-  border-radius: 12px;
-}
-
-.presentation-text {
-  animation: heroFade 1.2s ease-out forwards;
-}
-
-.presentation-text h2 {
-  margin-bottom: 15px;
-}
-
-.presentation-text p {
-  line-height: 1.7;
-}
 
 /* =====================
    GALERIE - FLÈCHES
