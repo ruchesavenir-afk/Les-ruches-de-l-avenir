@@ -6,7 +6,7 @@
 
   "menu": [
     { "nom": "Accueil", "lien": "index.html" },
-    { "nom": "Miels", "lien": "miels.html" },
+    { "nom": "Miels", "lien": "miel.html" },
     { "nom": "Élevage", "lien": "elevage.html" },
     { "nom": "Contact", "lien": "contact.html" }
   ],
@@ -25,7 +25,7 @@
     ]
   },
 
-  "miels": [
+  "miel": [
     {
       "nom": "Miel de printemps",
       "description": "Miel doux et cremeux issu des premières floraisons locales.",
