@@ -183,6 +183,18 @@
    GALERIE - FLÈCHES
 ===================== */
 
+.gallery-container {
+  position: relative;
+  width: 100%;
+  max-width: 900px;
+  margin: auto;
+}
+
+.gallery-image {
+  width: 100%;
+  border-radius: 12px;
+}
+
 .gallery-wrapper {
   position: relative;
 }
