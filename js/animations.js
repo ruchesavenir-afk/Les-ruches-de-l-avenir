@@ -1,15 +1,19 @@
-const reveals = document.querySelectorAll(".reveal");
+document.addEventListener("DOMContentLoaded", () => {
+  const reveals = document.querySelectorAll(".reveal");
 
-function revealOnScroll() {
-  const windowHeight = window.innerHeight;
-
-  reveals.forEach(el => {
-    const elementTop = el.getBoundingClientRect().top;
-    if (elementTop < windowHeight - 100) {
-      el.classList.add("active");
+  const observer = new IntersectionObserver(
+    (entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("active");
+          observer.unobserve(entry.target); // une seule fois
+        }
+      });
+    },
+    {
+      threshold: 0.15
     }
-  });
-}
+  );
 
-window.addEventListener("scroll", revealOnScroll);
-window.addEventListener("load", revealOnScroll);
+  reveals.forEach(el => observer.observe(el));
+});
