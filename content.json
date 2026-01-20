@@ -1,15 +1,26 @@
 {
   "site": {
     "nom": "Les ruches de l'avenir",
-    "description": "Apiculteur local à Villevêque et Cheffes. Production de miel non chauffé et élevage d’essaims sélectionnés.",
-    "telephone": "06 52 20 89 98",
-    "email": "Ruches.avenir@gmail.com",
-    "localisation": "Villevêque et Cheffes (Maine-et-Loire)"
+    "logo": "images/Logo.png"
   },
+  "menu": [
+    { "nom": "Accueil", "lien": "index.html" },
+    { "nom": "Élevage", "lien": "elevage.html" },
+    { "nom": "Contact", "lien": "contact.html" }
+  ],
 
   "presentation": {
     "titre": "Une apiculture durable et passionnée",
     "texte": "Passionné d’apiculture depuis plus de 10 ans, je produis un miel local, non chauffé, sans transhumance. Mes pratiques respectent le cycle naturel des abeilles et visent à préserver la biodiversité."
+    "image": "images/Accueil.jpg"
+  },
+  
+   "galerie": {
+    "titre": "Notre exploitation",
+    "images": [
+      "images/Elevage1.jpg",
+      "images/Elevage2.jpg"
+    ]
   },
 
   "miels": [
