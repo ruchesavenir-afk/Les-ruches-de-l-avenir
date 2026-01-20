@@ -16,7 +16,7 @@
   },
   
    "galerie": {
-    "titre": "Notre exploitation",
+    "titre": "Mon exploitation",
     "images": [
       "images/Elevage1.jpg",
       "images/Elevage2.jpg"
@@ -26,7 +26,7 @@
   "miels": [
     {
       "nom": "Miel de printemps",
-      "description": "Miel doux et floral issu des premières floraisons locales.",
+      "description": "Miel doux et cremeux issu des premières floraisons locales.",
       "imageMiel": "images/miel-printemps.jpg",
       "imageFleur": "images/fleur-printemps.jpg"
     },
@@ -45,7 +45,7 @@
   ],
 
   "elevage": {
-    "texte": "Vente d’essaims hivernés et de l’année issus de colonies sélectionnées sur la production de miel, la douceur et la lenteur à essaimer. Critères secondaires : hygiénisme, gestion du varroa, consommation hivernale et réserves.",
+    "texte": "Vente d’essaims hivernés et de l’année issus de colonies sélectionnées principalement sur la production de miel, la douceur et la lenteur à essaimer, mais également sur l'hygiénisme, la resistance au varroa, la consommation hivernale.",
     "prix": "Prix dégressifs selon quantité, me contacter.",
     "photos": [
       "images/elevage1.jpg",
