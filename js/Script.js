@@ -5,12 +5,12 @@ fetch("content.json")
     /* =====================
        LOGO + NOM DU SITE
     ====================== */
-    const logo = document.getElementById("site-logo");
+    const logo = document.getElementById("logo");
     if (logo && data.site?.logo) {
       logo.src = data.site.logo;
     }
 
-    const siteName = document.getElementById("site-name");
+    const siteName = document.getElementById("site-nom");
     if (siteName && data.site?.nom) {
       siteName.textContent = data.site.nom;
     }
@@ -18,7 +18,7 @@ fetch("content.json")
     /* =====================
        MENU
     ====================== */
-    const menu = document.getElementById("menu-items");
+    const menu = document.getElementById("menu");
     if (menu && Array.isArray(data.menu)) {
       menu.innerHTML = "";
       data.menu.forEach(item => {
