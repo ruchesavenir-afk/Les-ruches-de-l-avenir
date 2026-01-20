@@ -138,45 +138,48 @@
 }
 
 /* =====================
-   GALERIE DÉFILANTE
+   GALERIE - FLÈCHES
 ===================== */
 
-.gallery {
-  padding: 60px 30px;
+.gallery-wrapper {
+  position: relative;
 }
 
-.gallery h2 {
-  text-align: center;
-  margin-bottom: 30px;
+.gallery-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255,255,255,0.85);
+  border: none;
+  font-size: 28px;
+  padding: 10px 14px;
+  cursor: pointer;
+  border-radius: 50%;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease, background 0.3s ease;
+  z-index: 10;
 }
 
-.gallery-container {
-  display: flex;
-  gap: 20px;
-  overflow-x: auto;
-  scroll-behavior: smooth;
-  padding-bottom: 10px;
+.gallery-btn:hover {
+  background: #fff;
+  transform: translateY(-50%) scale(1.1);
 }
 
-.gallery-container::-webkit-scrollbar {
-  height: 8px;
+.gallery-btn.left {
+  left: 10px;
 }
 
-.gallery-container::-webkit-scrollbar-thumb {
-  background: rgba(0,0,0,0.25);
-  border-radius: 10px;
+.gallery-btn.right {
+  right: 10px;
 }
 
-.gallery-image {
-  height: 220px;
-  border-radius: 12px;
-  flex-shrink: 0;
-  transition: transform 0.4s ease;
+/* Cache les flèches sur mobile si besoin */
+@media (max-width: 700px) {
+  .gallery-btn {
+    display: none;
+  }
 }
 
-.gallery-image:hover {
-  transform: scale(1.05);
-}
 
 /* =====================
    FOOTER / MENTIONS
