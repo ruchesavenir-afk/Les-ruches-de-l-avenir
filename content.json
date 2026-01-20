@@ -25,6 +25,13 @@
     ]
   },
 
+  "reseaux": {
+  "googleMaps": "https://www.google.com/maps/place/Les+ruches+de+l'avenir,+5+Av.+des+Arts+et+M%C3%A9tiers,+49100+Angers/data=!4m2!3m1!1s0x480879005a65d11d:0xa798f833d9079e?utm_source=mstt_1&entry=gps&coh=192189&g_ep=CAESBjI1LjIuNBgAIMi8BypsLDk0MjQyNTg5LDk0MjIzMjk5LDk0MjE2NDEzLDk0MjEyNDk2LDk0MjA3Mzk0LDk0MjA3NTA2LDk0MjA4NTA2LDk0MjE3NTIzLDk0MjE4NjUzLDk0MjI5ODM5LDQ3MDg0MzkzLDk0MjEzMjAwQgJGUg%3D%3D",
+  "instagram": "https://www.instagram.com/Lesruchesdelavenir",
+  "facebook": "https://www.facebook.com/people/Les-ruches-de-lavenir/61556549022018/",
+  "tiktok": "https://www.tiktok.com/@Lesruchesdelavenir"
+},
+
   "miel": [
     {
       "nom": "Miel de printemps",
