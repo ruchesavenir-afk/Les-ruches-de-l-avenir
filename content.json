@@ -2,6 +2,8 @@
   "site": {
     "nom": "Les ruches de l'avenir",
     "logo": "images/logo.png"
+    "favicon": "images/favicon.png"
+
   },
 
   "menu": [
