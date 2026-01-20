@@ -89,3 +89,30 @@ if (mielsContainer && Array.isArray(data.miels)) {
     mielsContainer.appendChild(card);
   });
 }
+/* =====================
+   RESEAUX SOCIAUX
+===================== */
+const socialContainer = document.getElementById("social-links");
+
+if (socialContainer && data.reseaux) {
+  const icons = {
+    googleMaps: "📍",
+    instagram: "📸",
+    facebook: "📘",
+    tiktok: "🎵"
+  };
+
+  Object.entries(data.reseaux).forEach(([key, url]) => {
+    if (!url) return;
+
+    const a = document.createElement("a");
+    a.href = url;
+    a.target = "_blank";
+    a.rel = "noopener noreferrer";
+    a.title = key;
+
+    a.textContent = icons[key] || "🔗";
+
+    socialContainer.appendChild(a);
+  });
+}
