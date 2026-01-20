@@ -49,6 +49,47 @@ if (presentationTexte && data.presentation?.texte) {
   presentationTexte.textContent = data.presentation.texte;
 }
 
+/* =====================
+   GALERIE
+===================== */
+const galleryTitle = document.getElementById("gallery-title");
+const galleryContainer = document.getElementById("gallery-container");
+const btnLeft = document.getElementById("gallery-left");
+const btnRight = document.getElementById("gallery-right");
+
+let currentIndex = 0;
+
+if (
+  galleryContainer &&
+  Array.isArray(data.galerie?.images) &&
+  data.galerie.images.length > 0
+) {
+  // Titre
+  if (galleryTitle && data.galerie.titre) {
+    galleryTitle.textContent = data.galerie.titre;
+  }
+
+  // Création des images
+  galleryContainer.innerHTML = "";
+  data.galerie.images.forEach((src, index) => {
+    const img = document.createElement("img");
+    img.src = src;
+    img.alt = `Galerie image ${index + 1}`;
+    img.classList.add("gallery-image");
+
+    if (index !== 0) {
+      img.style.display = "none";
+    }
+
+    galleryContainer.appendChild(img);
+  });
+
+  const images = galleryContainer.querySelectorAll(".gallery-image");
+
+  // Navigation
+  if (btnLeft && btnRight) {
+    btnLeft.addEventListener("click", () => {
+      images[currentIndex].style.display = "none";
 
     /* =====================
    ELEVAGE
@@ -158,5 +199,9 @@ if (socialContainer && data.reseaux) {
     
     socialContainer.appendChild(a);
   });
+  const legalNotice = document.getElementById("legal-notice");
+if (legalNotice && data.legal) {
+  legalNotice.textContent = data.legal;
+}
 })
 .catch(error => console.error("Erreur chargement JSON :", error));
