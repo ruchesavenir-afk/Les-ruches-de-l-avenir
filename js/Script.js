@@ -3,6 +3,14 @@ fetch("content.json")
   .then(data => {
 
     /* =====================
+   FAVICON (JSON)
+===================== */
+const favicon = document.getElementById("favicon");
+if (favicon && data.site?.favicon) {
+  favicon.href = data.site.favicon;
+}
+    
+    /* =====================
        LOGO + NOM DU SITE
     ====================== */
     const logo = document.getElementById("logo");
