@@ -56,6 +56,27 @@ galleryContainer.appendChild(img);
 });
 }
 
+    /* ===== Flèches galerie ===== */
+const galleryContainer = document.getElementById("gallery-container");
+const btnLeft = document.getElementById("gallery-left");
+const btnRight = document.getElementById("gallery-right");
+
+if (galleryContainer && btnLeft && btnRight) {
+  btnLeft.addEventListener("click", () => {
+    galleryContainer.scrollBy({
+      left: -300,
+      behavior: "smooth"
+    });
+  });
+
+  btnRight.addEventListener("click", () => {
+    galleryContainer.scrollBy({
+      left: 300,
+      behavior: "smooth"
+    });
+  });
+}
+
 
 /* ===== Mentions légales ===== */
 const legal = document.getElementById("legal-notice");
