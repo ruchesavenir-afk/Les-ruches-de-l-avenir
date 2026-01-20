@@ -3,19 +3,21 @@
     "nom": "Les ruches de l'avenir",
     "logo": "images/Logo.png"
   },
+
   "menu": [
     { "nom": "Accueil", "lien": "index.html" },
+    { "nom": "Miels", "lien": "miels.html" },
     { "nom": "Élevage", "lien": "elevage.html" },
     { "nom": "Contact", "lien": "contact.html" }
   ],
 
   "presentation": {
     "titre": "Une apiculture durable et passionnée",
-    "texte": "Passionné d’apiculture depuis plus de 10 ans, je produis un miel local, non chauffé, sans transhumance. Mes pratiques respectent le cycle naturel des abeilles et visent à préserver la biodiversité."
+    "texte": "Passionné d’apiculture depuis plus de 10 ans, je produis un miel local, non chauffé, sans transhumance. Mes pratiques respectent le cycle naturel des abeilles et visent à préserver la biodiversité.",
     "image": "images/Accueil.jpg"
   },
   
-   "galerie": {
+  "galerie": {
     "titre": "Mon exploitation",
     "images": [
       "images/Elevage1.jpg",
@@ -55,5 +57,7 @@
       "images/elevage5.jpg",
       "images/elevage6.jpg"
     ]
-  }
+  },
+
+  "mentions_legales": "© 2026 Les ruches de l'avenir – Tous droits réservés"
 }
