@@ -6,7 +6,7 @@
 
   "menu": [
     { "nom": "Accueil", "lien": "index.html" },
-    { "nom": "Miels", "lien": "miel.html" },
+    { "nom": "Miel", "lien": "miel.html" },
     { "nom": "Élevage", "lien": "elevage.html" },
     { "nom": "Contact", "lien": "contact.html" }
   ],
