@@ -1,6 +1,52 @@
-<section class="section">
-  <h2>Élevage d’essaims</h2>
-  <p data-elevage-texte></p>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Élevage – Les ruches de l'avenir</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <div class="elevage-grid" data-elevage-photos></div>
-</section>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- =====================
+       HEADER
+  ====================== -->
+  <header class="header">
+    <div class="logo-container">
+      <img id="site-logo" alt="Logo du site">
+      <h1 id="site-name"></h1>
+    </div>
+
+    <nav class="menu">
+      <ul id="menu-items"></ul>
+    </nav>
+  </header>
+
+  <!-- =====================
+       SECTION ÉLEVAGE
+  ====================== -->
+  <section class="elevage-section reveal">
+    <h2>Élevage d’abeilles</h2>
+
+    <p id="elevage-texte"></p>
+    <p id="elevage-prix" class="elevage-prix"></p>
+
+    <div class="elevage-grid" id="elevage-photos"></div>
+  </section>
+
+  <!-- =====================
+       FOOTER
+  ====================== -->
+  <footer class="footer">
+    <p id="legal-notice"></p>
+  </footer>
+
+  <!-- =====================
+       SCRIPTS
+  ====================== -->
+  <script src="js/Script.js"></script>
+  <script src="js/animations.js"></script>
+
+</body>
+</html>
