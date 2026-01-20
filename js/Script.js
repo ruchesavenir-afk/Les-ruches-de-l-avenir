@@ -60,7 +60,7 @@ if (elevagePhotos && Array.isArray(data.elevage?.photos)) {
   });
 }
 
-        /* =====================
+/* =====================
    MIEL
 ===================== */
 const mielsContainer = document.getElementById("miels-container");
@@ -72,9 +72,22 @@ if (mielsContainer && Array.isArray(data.miels)) {
     const card = document.createElement("div");
     card.classList.add("card");
 
+    // Conteneur images
+    const imagesWrapper = document.createElement("div");
+    imagesWrapper.classList.add("miel-images");
+
     const imgMiel = document.createElement("img");
     imgMiel.src = miel.imageMiel;
-    imgMiel.alt = miel.nom;
+    imgMiel.alt = `Pot de ${miel.nom}`;
+    imgMiel.loading = "lazy";
+
+    const imgFleur = document.createElement("img");
+    imgFleur.src = miel.imageFleur;
+    imgFleur.alt = `Fleur associée au ${miel.nom}`;
+    imgFleur.loading = "lazy";
+
+    imagesWrapper.appendChild(imgMiel);
+    imagesWrapper.appendChild(imgFleur);
 
     const h3 = document.createElement("h3");
     h3.textContent = miel.nom;
@@ -82,13 +95,14 @@ if (mielsContainer && Array.isArray(data.miels)) {
     const p = document.createElement("p");
     p.textContent = miel.description;
 
-    card.appendChild(imgMiel);
+    card.appendChild(imagesWrapper);
     card.appendChild(h3);
     card.appendChild(p);
 
     mielsContainer.appendChild(card);
   });
 }
+
 /* =====================
    RESEAUX SOCIAUX (SVG)
 ===================== */
