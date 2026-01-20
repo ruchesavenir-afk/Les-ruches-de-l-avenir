@@ -2,102 +2,69 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <title>Les ruches de l'avenir – Apiculteur à Villevêque</title>
-
-  <meta name="description" content="Apiculteur local à Villevêque et Cheffes. Miel non chauffé, sans transhumance et élevage d’essaims sélectionnés.">
+  <title>Les ruches de l'avenir</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="robots" content="index, follow">
 
+  <!-- CSS -->
   <link rel="stylesheet" href="css/style.css">
-
-  <!-- SEO local -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "name": "Les ruches de l'avenir",
-    "description": "Apiculture locale, miel non chauffé",
-    "areaServed": "Maine-et-Loire",
-    "telephone": "0652208998",
-    "email": "Ruches.avenir@gmail.com"
-  }
-  </script>
 </head>
-
 <body>
 
-<!-- HERO -->
-<header class="hero">
-  <div class="hero-overlay">
-    <img src="images/logo.png" alt="Logo Les ruches de l'avenir" class="logo">
-    <h1 data-site-nom></h1>
+  <!-- =====================
+       HEADER
+  ====================== -->
+  <header class="header">
+    <div class="logo-container">
+      <img id="site-logo" alt="Logo du site">
+      <h1 id="site-name"></h1>
+    </div>
 
-    <nav>
-      <a href="miel.html">Miel</a>
-      <a href="elevage.html">Élevage</a>
-      <a href="contact.html">Contact</a>
+    <nav class="menu">
+      <ul id="menu-items"></ul>
     </nav>
-  </div>
-</header>
+  </header>
 
-<!-- PRÉSENTATION -->
-<section class="section reveal">
- <div class="presentation-image">
-<img id="presentation-image" alt="Photo de présentation">
-</div>
-<div class="presentation-text">
-<h2 id="presentation-title"></h2>
-<p id="presentation-description"></p>
-</div>
-</section>
+  <!-- =====================
+       PRESENTATION
+  ====================== -->
+  <section class="presentation hero">
+    <div class="presentation-image">
+      <img id="presentation-image" alt="Photo de présentation">
+    </div>
 
-<!-- APERÇU MIELS -->
-<section class="section reveal">
-  <h2>Miels artisanaux</h2>
-  <div class="grid" data-miels></div>
-</section>
+    <div class="presentation-text">
+      <h2 id="presentation-title"></h2>
+      <p id="presentation-description"></p>
+    </div>
+  </section>
 
-<!-- APERÇU ÉLEVAGE -->
-<section class="section reveal">
-  <h2>Élevage d’essaims</h2>
-  <p data-elevage-texte></p>
+  <!-- =====================
+       GALERIE
+  ====================== -->
+  <section class="gallery reveal">
+    <h2 id="gallery-title"></h2>
 
-  <div class="elevage-grid" data-elevage-photos></div>
+    <div class="gallery-wrapper">
+      <button class="gallery-btn left" id="gallery-left">&#10094;</button>
 
-  <p class="cta">
-    <a href="contact.html">Me contacter pour les tarifs</a>
-  </p>
-</section>
-  
-<!-- Album photos défilant -->
-<section class="gallery">
-  <h2 id="gallery-title"></h2>
+      <div class="gallery-container" id="gallery-container"></div>
 
-  <div class="gallery-wrapper">
-    <button class="gallery-btn left" id="gallery-left">&#10094;</button>
+      <button class="gallery-btn right" id="gallery-right">&#10095;</button>
+    </div>
+  </section>
 
-    <div class="gallery-container" id="gallery-container"></div>
+  <!-- =====================
+       FOOTER
+  ====================== -->
+  <footer class="footer">
+    <p id="legal-notice"></p>
+  </footer>
 
-    <button class="gallery-btn right" id="gallery-right">&#10095;</button>
-  </div>
-</section>
-
-  
-<!-- CONTACT RAPIDE -->
-<section class="section reveal">
-  <h2>Contact</h2>
-  <p>Téléphone : <strong data-telephone></strong></p>
-  <p>Email : <strong data-email></strong></p>
-</section>
-
-<!-- FOOTER -->
-<footer>
-  <p>© <span data-site-nom></span> – Tous droits réservés</p>
-  <p><a href="contact.html">Mentions légales</a></p>
-</footer>
-
-<script src="js/Script.js"></script>
-<script src="js/animations.js"></script>
+  <!-- =====================
+       SCRIPTS
+  ====================== -->
+  <script src="js/Script.js"></script>
+  <script src="js/animations.js"></script>
 
 </body>
 </html>
