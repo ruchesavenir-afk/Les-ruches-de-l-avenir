@@ -59,3 +59,33 @@ if (elevagePhotos && Array.isArray(data.elevage?.photos)) {
     elevagePhotos.appendChild(img);
   });
 }
+
+        /* =====================
+   MIEL
+===================== */
+const mielsContainer = document.getElementById("miels-container");
+
+if (mielsContainer && Array.isArray(data.miels)) {
+  mielsContainer.innerHTML = "";
+
+  data.miels.forEach(miel => {
+    const card = document.createElement("div");
+    card.classList.add("card");
+
+    const imgMiel = document.createElement("img");
+    imgMiel.src = miel.imageMiel;
+    imgMiel.alt = miel.nom;
+
+    const h3 = document.createElement("h3");
+    h3.textContent = miel.nom;
+
+    const p = document.createElement("p");
+    p.textContent = miel.description;
+
+    card.appendChild(imgMiel);
+    card.appendChild(h3);
+    card.appendChild(p);
+
+    mielsContainer.appendChild(card);
+  });
+}
