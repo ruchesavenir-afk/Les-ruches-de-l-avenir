@@ -155,6 +155,7 @@ if (socialContainer && data.reseaux) {
     a.rel = "noopener noreferrer";
     a.innerHTML = icons[key];
     a.setAttribute("aria-label", key);
+    
     socialContainer.appendChild(a);
   });
 })
