@@ -1,17 +1,49 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8">
-<title>Miels – Les ruches de l'avenir</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <title>Miel – Les ruches de l'avenir</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-<a href="index.html">← Accueil</a>
+  <!-- =====================
+       HEADER
+  ====================== -->
+  <header class="header">
+    <div class="logo-container">
+      <img id="site-logo" alt="Logo du site">
+      <h1 id="site-name"></h1>
+    </div>
 
-<h1>Miels artisanaux locaux</h1>
-<section data-miels class="grid"></section>
+    <nav class="menu">
+      <ul id="menu-items"></ul>
+    </nav>
+  </header>
 
-<script src="script.js"></script>
+  <!-- =====================
+       SECTION MIEL
+  ====================== -->
+  <section class="miel-section reveal">
+    <h2>Nos miels</h2>
+
+    <div class="miels-grid" id="miels-container"></div>
+  </section>
+
+  <!-- =====================
+       FOOTER
+  ====================== -->
+  <footer class="footer">
+    <p id="legal-notice"></p>
+  </footer>
+
+  <!-- =====================
+       SCRIPTS
+  ====================== -->
+  <script src="js/Script.js"></script>
+  <script src="js/animations.js"></script>
+
 </body>
 </html>
