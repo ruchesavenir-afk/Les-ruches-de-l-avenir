@@ -31,10 +31,24 @@ fetch("content.json")
       });
     }
 
-    /* =====================
-       PRESENTATION
-    ====================== */
-    const
+ /* =====================
+   PRESENTATION
+===================== */
+const presentationImage = document.getElementById("presentation-image");
+if (presentationImage && data.presentation?.image) {
+  presentationImage.src = data.presentation.image;
+}
+
+const presentationTitre = document.getElementById("presentation-titre");
+if (presentationTitre && data.presentation?.titre) {
+  presentationTitre.textContent = data.presentation.titre;
+}
+
+const presentationTexte = document.getElementById("presentation-texte");
+if (presentationTexte && data.presentation?.texte) {
+  presentationTexte.textContent = data.presentation.texte;
+}
+
 
     /* =====================
    ELEVAGE
