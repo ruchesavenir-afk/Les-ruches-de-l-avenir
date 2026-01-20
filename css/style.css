@@ -55,3 +55,153 @@
   width: 100%;
   border-radius: 10px;
 }
+/* =====================
+   HEADER / MENU
+===================== */
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+#site-logo {
+  height: 55px;
+}
+
+.menu ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.menu a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 600;
+  position: relative;
+}
+
+.menu a::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #c59d5f;
+  transition: width 0.3s ease;
+}
+
+.menu a:hover::after {
+  width: 100%;
+}
+
+/* =====================
+   PRESENTATION
+===================== */
+
+.presentation {
+  display: flex;
+  gap: 40px;
+  padding: 80px 30px;
+  max-width: 1200px;
+  margin: auto;
+  align-items: center;
+}
+
+.presentation-image img {
+  border-radius: 12px;
+}
+
+.presentation-text {
+  animation: heroFade 1.2s ease-out forwards;
+}
+
+.presentation-text h2 {
+  margin-bottom: 15px;
+}
+
+.presentation-text p {
+  line-height: 1.7;
+}
+
+/* =====================
+   GALERIE DÉFILANTE
+===================== */
+
+.gallery {
+  padding: 60px 30px;
+}
+
+.gallery h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.gallery-container {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding-bottom: 10px;
+}
+
+.gallery-container::-webkit-scrollbar {
+  height: 8px;
+}
+
+.gallery-container::-webkit-scrollbar-thumb {
+  background: rgba(0,0,0,0.25);
+  border-radius: 10px;
+}
+
+.gallery-image {
+  height: 220px;
+  border-radius: 12px;
+  flex-shrink: 0;
+  transition: transform 0.4s ease;
+}
+
+.gallery-image:hover {
+  transform: scale(1.05);
+}
+
+/* =====================
+   FOOTER / MENTIONS
+===================== */
+
+.footer {
+  margin-top: 80px;
+  padding: 25px;
+  text-align: center;
+  background: #222;
+  color: #fff;
+  font-size: 0.9em;
+}
+
+/* =====================
+   RESPONSIVE
+===================== */
+
+@media (max-width: 900px) {
+  .presentation {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .menu ul {
+    gap: 15px;
+  }
+}
