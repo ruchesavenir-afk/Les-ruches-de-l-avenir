@@ -35,3 +35,27 @@ fetch("content.json")
        PRESENTATION
     ====================== */
     const
+
+    /* =====================
+   ELEVAGE
+===================== */
+const elevageTexte = document.getElementById("elevage-texte");
+if (elevageTexte && data.elevage?.texte) {
+  elevageTexte.textContent = data.elevage.texte;
+}
+
+const elevagePrix = document.getElementById("elevage-prix");
+if (elevagePrix && data.elevage?.prix) {
+  elevagePrix.textContent = data.elevage.prix;
+}
+
+const elevagePhotos = document.getElementById("elevage-photos");
+if (elevagePhotos && Array.isArray(data.elevage?.photos)) {
+  elevagePhotos.innerHTML = "";
+  data.elevage.photos.forEach(src => {
+    const img = document.createElement("img");
+    img.src = src;
+    img.alt = "Photo élevage";
+    elevagePhotos.appendChild(img);
+  });
+}
