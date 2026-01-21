@@ -62,49 +62,58 @@ fetch("content.json")
     /* =====================
        GALERIE
     ====================== */
-    var galleryTitle = document.getElementById("gallery-title");
-    var galleryContainer = document.getElementById("gallery-container");
-    var btnLeft = document.getElementById("gallery-left");
-    var btnRight = document.getElementById("gallery-right");
-    var currentIndex = 0;
+    const images = [
+  "images/gallery1.jpg",
+  "images/gallery2.jpg",
+  "images/gallery3.jpg",
+  "images/gallery4.jpg",
+  "images/gallery5.jpg",
+  "images/gallery6.jpg",
+  "images/gallery7.jpg",
+  "images/gallery8.jpg",
+  "images/gallery9.jpg",
+  "images/gallery10.jpg"
+];
 
-    if (
-      galleryContainer &&
-      data.galerie &&
-      Array.isArray(data.galerie.images) &&
-      data.galerie.images.length > 0
-    ) {
-      if (galleryTitle && data.galerie.titre) {
-        galleryTitle.textContent = data.galerie.titre;
-      }
+const track = document.getElementById("gallery-track");
+let currentIndex = 0;
 
-      galleryContainer.innerHTML = "";
+// Création des images
+images.forEach((src, index) => {
+  const img = document.createElement("img");
+  img.src = src;
+  img.classList.add("gallery-image");
+  if (index === 0) img.classList.add("active");
+  track.appendChild(img);
+});
 
-      data.galerie.images.forEach(function (src, index) {
-        var img = document.createElement("img");
-        img.src = src;
-        img.alt = "Galerie image " + (index + 1);
-        img.className = "gallery-image";
-        if (index !== 0) img.style.display = "none";
-        galleryContainer.appendChild(img);
-      });
+const imgs = document.querySelectorAll(".gallery-image");
 
-      var images = galleryContainer.querySelectorAll(".gallery-image");
+function updateGallery() {
+  imgs.forEach((img, index) => {
+    img.classList.remove("active", "prev", "next");
 
-      if (btnLeft && btnRight) {
-        btnLeft.addEventListener("click", function () {
-          images[currentIndex].style.display = "none";
-          currentIndex = (currentIndex - 1 + images.length) % images.length;
-          images[currentIndex].style.display = "block";
-        });
-
-        btnRight.addEventListener("click", function () {
-          images[currentIndex].style.display = "none";
-          currentIndex = (currentIndex + 1) % images.length;
-          images[currentIndex].style.display = "block";
-        });
-      }
+    if (index === currentIndex) {
+      img.classList.add("active");
+    } else if (index === currentIndex - 1) {
+      img.classList.add("prev");
+    } else if (index === currentIndex + 1) {
+      img.classList.add("next");
     }
+  });
+}
+
+document.getElementById("next").addEventListener("click", () => {
+  currentIndex = (currentIndex + 1) % imgs.length;
+  updateGallery();
+});
+
+document.getElementById("prev").addEventListener("click", () => {
+  currentIndex = (currentIndex - 1 + imgs.length) % imgs.length;
+  updateGallery();
+});
+
+updateGallery();
 
     /* =====================
        ELEVAGE
