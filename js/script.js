@@ -114,6 +114,23 @@ document.getElementById("prev").addEventListener("click", () => {
 });
 
 updateGallery();
+let autoPlayInterval = null;
+const AUTOPLAY_DELAY = 4000; // 4 secondes
+
+function startAutoplay() {
+  stopAutoplay();
+  autoPlayInterval = setInterval(() => {
+    currentIndex = (currentIndex + 1) % imgs.length;
+    updateGallery();
+  }, AUTOPLAY_DELAY);
+}
+
+function stopAutoplay() {
+  if (autoPlayInterval) {
+    clearInterval(autoPlayInterval);
+    autoPlayInterval = null;
+  }
+}
 
     /* =====================
        ELEVAGE
