@@ -131,6 +131,7 @@ function stopAutoplay() {
     autoPlayInterval = null;
   }
 }
+startAutoplay();
 
     /* =====================
        ELEVAGE
