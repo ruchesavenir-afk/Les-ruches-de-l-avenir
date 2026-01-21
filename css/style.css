@@ -43,6 +43,20 @@
   opacity: 0.9;
 }
 
+.hero-title-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.hero-logo {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #fff;
+}
+
 /* =====================
    PRESENTATION
 ===================== */
