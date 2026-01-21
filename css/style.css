@@ -329,6 +329,24 @@ body {
   color: #f2b705; /* ton jaune */
 }
 
+.social-links {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+.social-links a {
+  color: #333;
+  font-size: 1.6rem;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-links a:hover {
+  color: #c9a227;
+  transform: translateY(-3px);
+}
+
 /* =====================
    MIEL : DEUX IMAGES
 ===================== */
